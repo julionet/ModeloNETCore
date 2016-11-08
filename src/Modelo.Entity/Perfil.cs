@@ -11,14 +11,14 @@ namespace Modelo.Entity
 
         public virtual ICollection<PerfilFuncao> PerfilFuncao { get; set; }
 
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<UsuarioPerfil> UsuarioPerfil { get; set; }
 
         public int QuantidadeFuncoes { get; set; }
 
         public Perfil()
         {
             this.PerfilFuncao = new HashSet<PerfilFuncao>();
-            this.Usuario = new HashSet<Usuario>();
+            this.UsuarioPerfil = new HashSet<UsuarioPerfil>();
         }
     }
 }

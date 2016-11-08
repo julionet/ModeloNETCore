@@ -7,8 +7,6 @@ namespace Modelo.Entity
 {
     public class DominioItem : BaseClass
     {
-        public int Id { get; set; }
-
         public string Descricao { get; set; }
 
         public string Valor { get; set; }

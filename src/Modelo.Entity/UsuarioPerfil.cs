@@ -5,16 +5,12 @@ using System.Threading.Tasks;
 
 namespace Modelo.Entity
 {
-    public class ParametroUsuario : BaseClass
+    public class UsuarioPerfil
     {
-        public int ParametroId { get; set; }
-
         public int UsuarioId { get; set; }
-
-        public string Valor { get; set; }
-
-        public virtual Parametro Parametro { get; set; }
+        public int PerfilId { get; set; }
 
         public virtual Usuario Usuario { get; set; }
+        public virtual Perfil Perfil { get; set; }
     }
 }

@@ -3,6 +3,9 @@
 
   "dependencies": {
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0",
+    "Microsoft.Framework.Configuration": "1.0.0-beta8",
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta8",
     "Modelo.Entity": "1.0.0-*",
     "NETStandard.Library": "1.6.0"
   },

@@ -7,8 +7,6 @@ namespace Modelo.Entity
 {
     public class Dominio : BaseClass
     {
-        public int Id { get; set; }
-
         public string Descricao { get; set; }
 
         public virtual ICollection<DominioItem> DominioItem { get; set; }

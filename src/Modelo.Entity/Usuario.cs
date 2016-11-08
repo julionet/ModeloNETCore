@@ -31,7 +31,7 @@ namespace Modelo.Entity
 
         public virtual ICollection<UsuarioFuncao> UsuarioFuncao { get; set; }
 
-        public virtual ICollection<Perfil> Perfil { get; set; }
+        public virtual ICollection<UsuarioPerfil> UsuarioPerfil { get; set; }
 
         public virtual ICollection<ParametroUsuario> ParametroUsuario { get; set; }
 
@@ -40,7 +40,7 @@ namespace Modelo.Entity
         public Usuario()
         {
             this.UsuarioFuncao = new HashSet<UsuarioFuncao>();
-            this.Perfil = new HashSet<Perfil>();
+            this.UsuarioPerfil = new HashSet<UsuarioPerfil>();
             this.ParametroUsuario = new HashSet<ParametroUsuario>();
         }
     }

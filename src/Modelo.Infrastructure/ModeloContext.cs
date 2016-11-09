@@ -19,8 +19,8 @@ namespace Modelo.Infrastructure
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
-            string setting = builder.Build()["ConnectionStrings:ModeloConnection"].ToString();
-            optionsBuilder.UseSqlServer(setting);
+            string connectionString = builder.Build()["ConnectionStrings:ModeloConnection"].ToString();
+            optionsBuilder.UseSqlServer(connectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,5 +42,22 @@ namespace Modelo.Infrastructure
             modelBuilder.AddConfiguration(new UsuarioFuncaoMapping());
             modelBuilder.AddConfiguration(new UsuarioMapping());
         }
+
+        public DbSet<Bloqueio> Bloqueios { get; set; }
+        public DbSet<Dominio> Dominios { get; set; }
+        public DbSet<DominioItem> DominiosItens { get; set; }
+        public DbSet<Funcao> Funcoes { get; set; }
+        public DbSet<Grafico> Graficos { get; set; }
+        public DbSet<GraficoSerie> GraficoSeries { get; set; }
+        public DbSet<Modulo> Modulos { get; set; }
+        public DbSet<Parametro> Parametros { get; set; }
+        public DbSet<ParametroUsuario> ParametroUsuarios { get; set; }
+        public DbSet<Perfil> Perfis { get; set; }
+        public DbSet<PerfilFuncao> PerfilFuncoes { get; set; }
+        public DbSet<Relatorio> Relatorios { get; set; }
+        public DbSet<Sistema> Sistemas { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<UsuarioFuncao> UsuarioFuncoes { get; set; }
+        public DbSet<UsuarioPerfil> UsuarioPerfis { get; set; }
     }
 }

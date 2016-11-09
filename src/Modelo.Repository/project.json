@@ -2,9 +2,11 @@
   "version": "1.0.0-*",
 
   "dependencies": {
+    "Modelo.Dto": "1.0.0-*",
     "Modelo.Entity": "1.0.0-*",
     "Modelo.Infrastructure": "1.0.0-*",
     "Modelo.Interface": "1.0.0-*",
+    "Modelo.Library": "1.0.0-*",
     "NETStandard.Library": "1.6.0",
     "System.Linq.Dynamic.Core": "1.0.6.8"
   },

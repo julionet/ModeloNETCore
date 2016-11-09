@@ -41,6 +41,7 @@ namespace Modelo.Infrastructure
             modelBuilder.AddConfiguration(new SistemaMapping());
             modelBuilder.AddConfiguration(new UsuarioFuncaoMapping());
             modelBuilder.AddConfiguration(new UsuarioMapping());
+            modelBuilder.AddConfiguration(new UsuarioPerfilMapping());
         }
 
         public DbSet<Bloqueio> Bloqueios { get; set; }

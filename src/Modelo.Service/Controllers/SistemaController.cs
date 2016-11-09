@@ -18,7 +18,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("salvar")]
-        public string Salvar(SistemaModuloFuncaoDTO entity)
+        public string Salvar([FromBody]SistemaModuloFuncaoDTO entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())
@@ -82,7 +82,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("excluir")]
-        public string Excluir(Sistema entity)
+        public string Excluir([FromBody]Sistema entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())

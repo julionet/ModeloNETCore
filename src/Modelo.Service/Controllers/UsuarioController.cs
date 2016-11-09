@@ -18,7 +18,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("salvar")]
-        public string Salvar(BasePostDTO<Usuario> entity)
+        public string Salvar([FromBody]BasePostDTO<Usuario> entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())
@@ -38,7 +38,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("excluir")]
-        public string Excluir(BasePostDTO<Usuario> entity)
+        public string Excluir([FromBody]BasePostDTO<Usuario> entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())
@@ -97,7 +97,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("alterarsenha")]
-        public string AlterarSenha(LoginDTO login)
+        public string AlterarSenha([FromBody]LoginDTO login)
         {
             return new UsuarioRepository().AlterarSenha(login.Usuario, login.Senha, login.NovaSenha, login.Confirmacao);
         }

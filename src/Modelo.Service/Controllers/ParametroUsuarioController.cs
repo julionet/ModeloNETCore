@@ -18,7 +18,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("salvar")]
-        public string Salvar(BasePostDTO<ParametroUsuario> entity)
+        public string Salvar([FromBody]BasePostDTO<ParametroUsuario> entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())
@@ -38,7 +38,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("excluir")]
-        public string Excluir(BasePostDTO<ParametroUsuario> entity)
+        public string Excluir([FromBody]BasePostDTO<ParametroUsuario> entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())

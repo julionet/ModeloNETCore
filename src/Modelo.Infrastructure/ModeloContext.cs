@@ -26,6 +26,7 @@ namespace Modelo.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.AddConfiguration(new AtualizacaoMapping());
             modelBuilder.AddConfiguration(new BloqueioMapping());
             modelBuilder.AddConfiguration(new DominioItemMapping());
             modelBuilder.AddConfiguration(new DominioMapping());
@@ -38,15 +39,17 @@ namespace Modelo.Infrastructure
             modelBuilder.AddConfiguration(new PerfilFuncaoMapping());
             modelBuilder.AddConfiguration(new PerfilMapping());
             modelBuilder.AddConfiguration(new RelatorioMapping());
+            modelBuilder.AddConfiguration(new SequencialMapping());
             modelBuilder.AddConfiguration(new SistemaMapping());
             modelBuilder.AddConfiguration(new UsuarioFuncaoMapping());
             modelBuilder.AddConfiguration(new UsuarioMapping());
             modelBuilder.AddConfiguration(new UsuarioPerfilMapping());
         }
 
+        public DbSet<Atualizacao> Atualizacoes { get; set; }
         public DbSet<Bloqueio> Bloqueios { get; set; }
         public DbSet<Dominio> Dominios { get; set; }
-        public DbSet<DominioItem> DominiosItens { get; set; }
+        public DbSet<DominioItem> DominioItens { get; set; }
         public DbSet<Funcao> Funcoes { get; set; }
         public DbSet<Grafico> Graficos { get; set; }
         public DbSet<GraficoSerie> GraficoSeries { get; set; }
@@ -56,6 +59,7 @@ namespace Modelo.Infrastructure
         public DbSet<Perfil> Perfis { get; set; }
         public DbSet<PerfilFuncao> PerfilFuncoes { get; set; }
         public DbSet<Relatorio> Relatorios { get; set; }
+        public DbSet<Sequencial> Sequenciais { get; set; }
         public DbSet<Sistema> Sistemas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<UsuarioFuncao> UsuarioFuncoes { get; set; }

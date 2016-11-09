@@ -48,7 +48,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("validardados")]
-        public string ValidarDados(Modulo entity)
+        public string ValidarDados([FromBody]Modulo entity)
         {
             return new ModuloRepository().ValidarDados(entity);
         }

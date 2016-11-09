@@ -18,7 +18,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("salvar")]
-        public string Salvar(BasePostDTO<Parametro> entity)
+        public string Salvar([FromBody]BasePostDTO<Parametro> entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())
@@ -38,7 +38,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("excluir")]
-        public string Excluir(BasePostDTO<Parametro> entity)
+        public string Excluir([FromBody]BasePostDTO<Parametro> entity)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())
@@ -90,7 +90,7 @@ namespace Modelo.Service.Controllers
 
         [HttpPost]
         [Route("gravarparametro")]
-        public string GravarParametro(BasePostDTO<Parametro[]> parametros)
+        public string GravarParametro([FromBody]BasePostDTO<Parametro[]> parametros)
         {
             ModeloContext _db = new ModeloContext();
             using (IDbContextTransaction transacao = _db.Database.BeginTransaction())

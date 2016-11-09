@@ -20,7 +20,8 @@
     "Modelo.Entity": "1.0.0-*",
     "Modelo.Infrastructure": "1.0.0-*",
     "Modelo.Repository": "1.0.0-*",
-    "Modelo.Dto": "1.0.0-*"
+    "Modelo.Dto": "1.0.0-*",
+    "System.Reflection.Extensions": "4.0.1"
   },
 
   "tools": {

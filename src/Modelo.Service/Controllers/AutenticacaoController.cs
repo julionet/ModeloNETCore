@@ -12,7 +12,7 @@ using Modelo.Entity;
 namespace Modelo.Service.Controllers
 {
     [Route("api/autenticacao")]
-    public class AutenticacaoController : Controller
+    public class AutenticacaoController : Controller, IAutenticacaoController
     {
         private IMemoryCache _memoryCache;
         public AutenticacaoController(IMemoryCache memoryCache)

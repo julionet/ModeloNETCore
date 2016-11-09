@@ -20,6 +20,13 @@ namespace Modelo.Service.Controllers
             _memoryCache = memoryCache;
         }
 
+        [HttpGet]
+        [Route("gettoken")]
+        public string GetToken()
+        {
+            return Token.GerarToken(_memoryCache);
+        }
+
         [HttpPost]
         [Route("validarlogin")]
         public string ValidarLogin([FromBody] AutenticacaoDTO login)
@@ -28,13 +35,6 @@ namespace Modelo.Service.Controllers
                 return new UsuarioRepository().ValidarLogin(login.Login, login.Senha);
             else
                 return "Falha na autenticação do serviço!";
-        }
-
-        [HttpGet]
-        [Route("gettoken")]
-        public string GetToken()
-        {
-            return Token.GerarToken(_memoryCache);
         }
 
         [HttpPost]
@@ -55,15 +55,15 @@ namespace Modelo.Service.Controllers
         }
 
         [HttpGet]
-        [Route("selecionar/{id}")]
-        public Sistema Selecionar(int id)
+        [Route("selecionarsistema/{id}")]
+        public Sistema SelecionarSistema(int id)
         {
             return new SistemaRepository().Selecionar(id);
         }
 
         [HttpGet]
-        [Route("selecionarativosportipo/{tipo}")]
-        public List<Sistema> SelecionarAtivosPorTipo(string tipo)
+        [Route("selecionarsistemasativosportipo/{tipo}")]
+        public List<Sistema> SelecionarSistemasAtivosPorTipo(string tipo)
         {
             return new SistemaRepository().SelecionarAtivosPorTipo(tipo).ToList();
         }

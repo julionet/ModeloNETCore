@@ -13,7 +13,7 @@ namespace Modelo.Infrastructure
     {
         public ModeloContext()
         {
-            Database.EnsureCreated();
+            ModeloInitializer.Seed(this);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

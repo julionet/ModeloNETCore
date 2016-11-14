@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage;
+using Modelo.Dto;
+using Modelo.Entity;
+using Modelo.Infrastructure;
+using Modelo.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Modelo.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage;
-using Modelo.Repository;
-using Modelo.Entity;
-using Modelo.Dto;
 
 namespace Modelo.Service.Controllers
 {
